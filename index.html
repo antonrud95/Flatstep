@@ -5,12 +5,147 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
+        <!-- Font awesome -->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css"
+        integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
         <!-- Bootstrap CSS -->
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-
-        <title>Hello, world!</title>
+        <link rel="stylesheet" href="css/styles.css">
+        <title>Flatstep</title>
     </head>
     <body>
+        <header class="header">
+            <div class="section-inner">
+                <div class="navigation">
+                    <a href="#" class="navigation__logo">
+                        <img class="black" src="./img/header/header-logo.svg" alt="">
+                        <img class="white" src="./img/header/header-logo-white.svg" alt="">
+                    </a>
+                    <div class="navigation__burger">
+                        <img src="./img/header/header-burger.svg" class="first" alt="">
+                        <img src="./img/header/header-burger-close.svg" class="second" alt="">
+                    </div>
+                    <nav class="navigation__nav">
+                        <div class="navigation__nav__dropdown">
+                            <a class="navigation-link" href="#">For sale</a>
+                            <a class="navigation-link" href="#">To rent</a>
+                            <div class="dropdown navigation__nav__dropdown__item">
+                                <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                    Developer offers
+                                    <span class="caret"></span>
+                                    <i class="fas fa-chevron-down"></i>
+                                </button>
+                                <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                                    <li><a class="drop-link" href="#">New apartments</a></li>
+                                    <li><a class="drop-link" href="#">New houses</a></li>
+                                </ul>
+                            </div>
+                            <a class="navigation-link" href="#">Blog</a>
+                        </div>
+                        <div class="navigation__nav__account">
+                            <a href="#">
+                                <img src="./img/header/header-profile.svg" alt="">
+                                My account
+                            </a>
+                            <a class="main-button" href="#">
+                                Post your ad
+                            </a>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </header>
+
+        <section class="inner">
+            <div class="container">
+                <div class="inner-content">
+                    <div class="inner-form">
+                        <h2>
+                            Find the best place for you in...
+                        </h2>
+                        <div class="inner-select-box">
+                            <input type="text" placeholder="Select from the list or enter a city">
+                        </div>
+                        <div class="dropdown inner__dropdown__item">
+                            <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                Apartments
+                                <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                                <li><a href="#">Apartments</a></li>
+                                <li><a href="#">Houses</a></li>
+                                <li><a href="#">Garden plots</a></li>
+                            </ul>
+                        </div>
+                        <div class="dropdown inner__dropdown__item">
+                            <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                Price
+                                <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                                <li><a href="#">500$-1000$</a></li>
+                                <li><a href="#">1000$-1500$</a></li>
+                                <li><a href="#">1500$-2000$</a></li>
+                                <li><a href="#">2500$-3000$</a></li>
+                            </ul>
+                        </div>
+                        <div class="dropdown inner__dropdown__item">
+                            <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                Footage
+                                <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                                <li><a href="#">20м<sup>2</sup>-35м<sup>2</sup></a></li>
+                                <li><a href="#">35м<sup>2</sup>-50м<sup>2</sup></a></li>
+                                <li><a href="#">50м<sup>2</sup>-65м<sup>2</sup></a></li>
+                                <li><a href="#">65м<sup>2</sup>-75м<sup>2</sup></a></li>
+                                <li><a href="#">75м<sup>2</sup>-90м<sup>2</sup></a></li>
+                            </ul>
+                        </div>
+                        <div class="dropdown inner__dropdown__item">
+                            <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                Rooms
+                                <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                                <li><a href="#">1</a></li>
+                                <li><a href="#">2</a></li>
+                                <li><a href="#">3</a></li>
+                                <li><a href="#">4</a></li>
+                                <li><a href="#">5+</a></li>
+                            </ul>
+                        </div>
+                        <div class="inner-checkbox-form">
+                            <label class="label">
+                                <input class="check" type="checkbox">
+                                <span class="style"></span>
+                                <span class="text">For rent</span>
+                            </label>
+                            <label class="label">
+                                <input class="check" type="checkbox">
+                                <span class="style"></span>
+                                <span class="text">For sale</span>
+                            </label>
+                        </div>
+                        <div class="inner-search-button">
+                            <a href="#" class="main-button">Search</a>
+                        </div>
+                    </div>
+                    <div class="inner-title">
+                        <div class="inner-title__description">
+                            <h1>
+                                Ready to find<br>your new home?
+                            </h1>
+                            <p>
+                                Choose the best place for yourself from 25.000
+                                apartments and houses all over Poland.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </section>
 
 
     <!-- Optional JavaScript -->
@@ -18,5 +153,6 @@
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script src="./js/burger.js"></script>
     </body>
 </html>

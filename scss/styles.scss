@@ -64,9 +64,17 @@ h3 {
 h4 {
     font-family: 'Avenir Next';
     font-style: normal;
-    font-weight: 500;
+    font-weight: 400;
     font-size: 14px;
     line-height: 19px;
+    color: $color-text;
+}
+h5 {
+    font-family: 'Avenir Next';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
     color: $color-text;
 }
 a,
@@ -660,6 +668,7 @@ p {
 }
 @media (max-width: 818px) {
     .choice {
+        padding-bottom: 44px;
         .container {
             .choice-title {
                 margin: 88px auto 40px auto;
@@ -729,3 +738,115 @@ p {
     }
 }
 // === /CHOICE ==============================================================================
+
+// === OFFERS ==============================================================================
+.offers {
+    padding: 92px 0;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 92px;
+    .container {
+        display: flex;
+        .offers-title {
+            h2 {
+                margin-bottom: 24px;
+                text-transform: uppercase;
+                font-weight: 700;
+            }
+            p {
+                margin-bottom: 32px;
+            }
+            a {
+                padding: 11px 28px;
+            }
+            max-width: 450px;
+        }
+        .offers-cards {
+            display: flex;
+            position: absolute;
+            right: -130px;
+            &__item {
+                box-shadow: 0px 10px 20px rgba(38, 48, 86, 0.1);
+                border-radius: 6px;
+                position: relative;
+                margin-right: 30px;
+                &__images {
+                    position: relative;
+                    &__dots {
+                        position: absolute;
+                        bottom: 15px;
+                        left: 50%;
+                        transform: translateX(-50%);
+                        .fa-circle {
+                            font-size: 6px;
+                            color: $color-white;
+                            &:nth-child(2),
+                            &:nth-child(3) {
+                                opacity: .7;
+                            }
+                        }
+                    }
+                }
+                &__description {
+                    padding: 16px 0 0 16px;
+                    &__map {
+                        display: flex;
+                        align-items: center;
+                        margin: 7px 0 8px 0;
+                        a {
+                            margin-right: 7px;
+                            img {
+                                margin-top: 2px;
+                            }
+                        }
+                    }
+                    .price {
+                        display: inline-block;
+                        padding: 5px 15px;
+                        background: #FFC46C;
+                        border-radius: 4px;
+                        margin-bottom: 16px;
+                    }
+                }
+            }
+            &__gradient {
+                position: absolute;
+                right: 130px;
+            }
+        }
+    }
+}
+@media (max-width: 1175px) {
+    .offers {
+        .container {
+            .offers-title {
+                max-width: 420px;
+            }
+        }
+    }
+}
+@media (max-width: 1150px) {
+    .offers {
+        .container {
+            .offers-title {
+                max-width: 375px;
+            }
+        }
+    }
+}
+@media (max-width: 1100px) {
+    .offers {
+        padding: 44px 0;
+        margin-bottom: 0;
+        .container {
+            .offers-title {
+                text-align: center;
+                max-width: 100%;
+            }
+            .offers-cards {
+                display: none;
+            }
+        }
+    }
+}
+// === /OFFERS ==============================================================================

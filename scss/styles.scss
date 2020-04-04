@@ -744,7 +744,6 @@ p {
     padding: 92px 0;
     position: relative;
     overflow: hidden;
-    margin-bottom: 92px;
     .container {
         display: flex;
         .offers-title {
@@ -766,7 +765,6 @@ p {
             position: absolute;
             right: -130px;
             &__item {
-                box-shadow: 0px 10px 20px rgba(38, 48, 86, 0.1);
                 border-radius: 6px;
                 position: relative;
                 margin-right: 30px;
@@ -789,6 +787,8 @@ p {
                 }
                 &__description {
                     padding: 16px 0 0 16px;
+                    box-shadow: 0px 10px 20px rgba(38, 48, 86, 0.1);
+                    border-radius: 6px;
                     &__map {
                         display: flex;
                         align-items: center;
@@ -834,6 +834,13 @@ p {
         }
     }
 }
+@media (min-width: 1101px) {
+    .offers {
+        .container {
+            height: 320px;
+        }
+    }
+}
 @media (max-width: 1100px) {
     .offers {
         padding: 44px 0;
@@ -850,3 +857,64 @@ p {
     }
 }
 // === /OFFERS ==============================================================================
+
+// === HELP ==============================================================================
+.help {
+    padding: 92px 0 86px 0;
+    .container {
+        display: flex;
+        justify-content: space-between;
+        .help-item {
+            max-width: 358px;
+            max-height: 420px;
+            background: #F3F4F8;
+            border-radius: 4px;
+            &__img {
+                padding: 50px 0 25px 0;
+                text-align: center;
+            }
+            &:nth-child(2) {
+                .help-item__img {
+                    padding: 41px 0 25px 0;
+                }
+            }
+            &__description {
+                text-align: center;
+                padding: 0 40px;
+                margin-bottom: 44px;
+                h2 {
+                    text-transform: uppercase;
+                    font-weight: 700;
+                    margin-bottom: 20px;
+                }
+                p {
+                    margin-bottom: 32px;
+                }
+                a {
+                    display: inline-block;
+                    padding: 11px 30px;
+                    border-radius: 4px;
+                    border: 2px solid #263056;
+                }
+            }
+        }
+    }
+}
+@media (max-width: 1134px) {
+    .help {
+        padding: 44px 0;
+        .container {
+            flex-wrap: wrap;
+            .help-item {
+                margin: 0 auto 24px auto;
+                &:last-child {
+                    margin-bottom: 0;
+                }
+                &__description {
+                    padding: 0 25px;
+                }
+            } 
+        }
+    }
+}
+// === /HELP ==============================================================================

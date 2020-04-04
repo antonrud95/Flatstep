@@ -918,3 +918,61 @@ p {
     }
 }
 // === /HELP ==============================================================================
+
+// === PRICES ==============================================================================
+.prices {
+    background: #F3F4F8;
+    margin: 86px 0 82px 0;
+    .container {
+        display: flex;
+        .prices-graph {
+            padding: 102px 0;
+        }
+        .prices-description {
+            margin-left: 93px;
+            padding-top: 121px;
+            h2 {
+                text-transform: uppercase;
+                margin-bottom: 24px;
+            }
+            p {
+                margin-bottom: 32px;
+            }
+            a {
+                padding: 11px 17px;
+            }
+        }
+    }
+}
+@media (max-width: 1160px) {
+    .prices {
+        .container {
+            .prices-description {
+                margin-left: 43px;
+            }
+        }
+    }
+}
+@media (max-width: 1000px) {
+    .prices {
+        .container {
+            display: block;
+            .prices-graph {
+                text-align: center;
+                padding: 48px 0 40px 0;
+                img {
+                    max-width: 100%;
+                }
+            }
+            .prices-description {
+                text-align: center;
+                margin-left: 0;
+                padding-top: 0;
+                a {
+                    margin-bottom: 48px;
+                }
+            }
+        }
+    }
+}
+// === /PRICES ==============================================================================

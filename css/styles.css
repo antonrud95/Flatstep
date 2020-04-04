@@ -1015,4 +1015,41 @@ p {
         .help .container .help-item__description {
           padding: 0 25px; } }
 
+.prices {
+  background: #F3F4F8;
+  margin: 86px 0 82px 0; }
+  .prices .container {
+    display: flex; }
+    .prices .container .prices-graph {
+      padding: 102px 0; }
+    .prices .container .prices-description {
+      margin-left: 93px;
+      padding-top: 121px; }
+      .prices .container .prices-description h2 {
+        text-transform: uppercase;
+        margin-bottom: 24px; }
+      .prices .container .prices-description p {
+        margin-bottom: 32px; }
+      .prices .container .prices-description a {
+        padding: 11px 17px; }
+
+@media (max-width: 1160px) {
+  .prices .container .prices-description {
+    margin-left: 43px; } }
+
+@media (max-width: 1000px) {
+  .prices .container {
+    display: block; }
+    .prices .container .prices-graph {
+      text-align: center;
+      padding: 48px 0 40px 0; }
+      .prices .container .prices-graph img {
+        max-width: 100%; }
+    .prices .container .prices-description {
+      text-align: center;
+      margin-left: 0;
+      padding-top: 0; }
+      .prices .container .prices-description a {
+        margin-bottom: 48px; } }
+
 /*# sourceMappingURL=styles.css.map */

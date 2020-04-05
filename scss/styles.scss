@@ -21,6 +21,11 @@ $color-stars: #FFB84E;
     margin: 0 auto;
     padding: 0 20px;
 }
+.section-inner {
+    max-width: 1480px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
 .main-button {
     display: inline-block;
     background: $color-text;
@@ -76,6 +81,14 @@ h5 {
     font-size: 16px;
     line-height: 20px;
     color: $color-text;
+}
+h6 {
+    font-family: 'Avenir Next';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 54px;
+    line-height: 74px;
+    color: $color-stars;
 }
 a,
 p {
@@ -308,6 +321,7 @@ p {
                                 line-height: 30px;
                                 padding-top: 0;
                                 padding-bottom: 0;
+                                margin-right: 10px;
                                 .fa-chevron-down {
                                     color: $color-white;
                                 }
@@ -328,6 +342,7 @@ p {
                                 background: transparent;
                                 padding: 0;
                                 text-align: center;
+                                margin-left: 10px;
                                 .drop-link {
                                     margin-top: 24px;
                                     font-size: 18px;
@@ -934,6 +949,7 @@ p {
             h2 {
                 text-transform: uppercase;
                 margin-bottom: 24px;
+                font-weight: 700;
             }
             p {
                 margin-bottom: 32px;
@@ -976,3 +992,247 @@ p {
     }
 }
 // === /PRICES ==============================================================================
+
+// === ABOUT US ==============================================================================
+.about {
+    padding-top: 82px;
+    position: relative;
+    overflow: hidden;
+    .container {
+        .about-title {
+            text-align: center;
+            max-width: 660px;
+            margin: 0 auto 48px auto;
+            h2 {
+                text-transform: uppercase;
+                margin-bottom: 24px;
+                font-weight: 700;
+            }
+        }
+        .about-achievements {
+            display: flex;
+            justify-content: space-between;
+            max-width: 800px;
+            margin: 0 auto 72px auto;
+            p {
+                font-weight: 700;
+                text-transform: uppercase;
+            }
+            &__item {
+                text-align: center;
+            }
+        }
+    }
+    .section-inner {
+        position: relative;
+        overflow: hidden;
+        height: 600px;
+        .about-cards {
+            &__row {
+                &:nth-child(1) {
+                    position: absolute;
+                    margin-left: -200px;         
+                }
+                &:nth-child(2) {
+                    position: absolute;
+                    margin-top: 255px;
+                    margin-left: -20px;
+                }
+                display: flex;
+                &__item {
+                    width: 358px;
+                    margin-right: 30px;
+                    box-shadow: 5px 10px 40px rgba(0, 0, 0, 0.06);
+                    border-radius: 4px;
+                    padding: 32px 0 0 32px;
+                    &:last-child {
+                        margin-right: 0;
+                    }
+                    &__title {
+                        display: flex;
+                        margin-bottom: 16px;
+                        &__img {
+                            img {
+                                margin-right: 12px;
+                            }
+                        }
+                        &__description {
+                            a {
+                                font-weight: 600;
+                            }
+                        }
+                    }
+                    p {
+                        margin-bottom: 24px;
+                        max-width: 294px;
+                    }
+                    &__stars {
+                        margin-bottom: 32px;
+                        .fa-star {
+                            color: $color-stars;
+                            font-size: 13px;
+                        }
+                        .grey-star {
+                            color: #EBECF0;
+                        }
+                    }
+                }
+            }
+        }
+        .about-left-gradient {
+            position: absolute;
+            left: 0;
+        }
+        .about-right-gradient {
+            position: absolute;
+            right: 0;
+        }
+    }
+}
+@media (min-width: 769px) {
+    .about {
+        .container {
+            .about-cards-mobile {
+                display: none;
+            }
+        }
+    }
+}
+@media (max-width: 768px) {
+    .about {
+        padding: 44px 0 52px 0;
+        .container {
+            .about-achievements {
+                flex-wrap: wrap;
+                &__item {
+                    width: 50%;
+                }
+            }
+            .about-cards-mobile__item {
+                box-shadow: 5px 10px 40px rgba(0, 0, 0, 0.06);
+                border-radius: 4px;
+                &__title {
+                    display: flex;
+                    padding: 33px 0 0 24px;
+                    margin-bottom: 15px;
+                    &__img {
+                        margin-right: 12px;
+                    }
+                    &__description {
+                        a {
+                            font-weight: 600;
+                        }
+                    }
+                }
+                p {
+                    padding: 0 0 24px 24px;
+                }
+                &__stars {
+                    margin-left: 24px;
+                    padding-bottom: 32px;
+                    .fa-star {
+                        color: $color-stars;
+                    }
+                    .grey-star {
+                        color: #EBECF0;
+                    }
+                }
+            }
+        }
+        .section-inner {
+            display: none;
+        }
+    }
+}
+// === /ABOUT US ==============================================================================
+
+// === FOOTER ==============================================================================
+.footer {
+    background: #F4F5F7;
+    margin-top: 86px;
+    padding: 72px 0 113px 0;
+    .container {
+        .footer-navigation {
+            display: flex;
+            &__logo {
+                margin-right: 104px;
+            }
+            &__nav {
+                margin-right: 69px;
+                &__col {
+                    a {
+                        display: block;
+                        margin-bottom: 14px;
+                    }
+                }
+            }
+            &__services {
+                margin-right: 73px;
+                a {
+                    display: block;
+                    margin-bottom: 14px;
+                        &:last-child {
+                            margin-bottom: 0;
+                        }
+                }
+                h4 {
+                    font-weight: 700;
+                    margin-bottom: 17px;
+                    text-transform: uppercase;
+                }
+            }
+            &__map {
+                a {
+                    display: block;
+                    margin-bottom: 14px;
+                        &:last-child {
+                            margin-bottom: 0;
+                        }
+                }
+                h4 {
+                    font-weight: 700;
+                    margin-bottom: 17px;
+                    text-transform: uppercase;
+                }
+            }
+        }
+    }
+}
+@media (max-width: 875px) {
+    .footer {
+        padding: 56px 0 88px 0;
+        .container {
+            .footer-navigation {
+                flex-wrap: wrap;
+                &__logo {
+                    margin: 0 0 41px 0;
+                }
+                &__nav {
+                    margin-right: 0;
+                    display: flex;
+                    width: 100%;
+                    &__col {
+                        width: 50%;
+                        &:nth-child(1) {
+                            margin-bottom: 40px;
+                        }
+                        &:nth-child(2) {
+                            padding-left: 15px;
+                        }
+                    }
+                }
+                &__services {
+                    width: 50%;
+                    margin-right: 0;
+                    order: 3;
+                    padding-left: 15px;
+                }
+                &__map {
+                    width: 50%;
+                    order: 2;
+                }
+            }
+        }
+    }
+}
+// === /FOOTER ==============================================================================

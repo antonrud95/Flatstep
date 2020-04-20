@@ -103,10 +103,6 @@ p {
 .navigation-link {
     border-bottom: 2px solid transparent;
 }
-.navigation-link:hover {
-    color: $color-text !important;
-    border-bottom: 2px solid $color-text;
-}
 // === HEADER ==============================================================================
 .header {
     height: 88px;
@@ -152,6 +148,8 @@ p {
                             line-height: 22px;
                             &:focus {
                                 box-shadow: none;
+                            }
+                            &:hover {
                                 background: #f4f4f8;
                             }
                             .fa-chevron-down {
@@ -224,6 +222,10 @@ p {
             .navigation {
                 &__nav {
                     &__dropdown {
+                        .navigation-link:hover {
+                            color: $color-text !important;
+                            border-bottom: 2px solid $color-text;
+                        }
                         &__item {
                             height: 100%;
                             margin-right: 20px;
@@ -326,7 +328,7 @@ p {
                                     color: $color-white;
                                 }
                                 color: $color-white;
-                                &:focus {
+                                &:hover {
                                     background: transparent;
                                     color: #F6D29C;
                                     .fa-chevron-down {
@@ -374,6 +376,7 @@ p {
             display: flex;
             .inner-form {
                 background: $color-white;
+                border-radius: 4px;
                 h2 {
                     padding: 40px 0 0 40px;
                     width: 65%;
@@ -395,6 +398,9 @@ p {
                         font-weight: 400;
                         font-size: 14px;
                         line-height: 19px;
+                        color: $color-text;
+                    }
+                    ::-webkit-input-placeholder {
                         color: #BEC1CC;
                     }
                 }
@@ -436,6 +442,19 @@ p {
                     .dropdown-menu {
                         padding-left: 18px;
                     }
+                    .dropdown-menu.show { 
+                        li {
+                            font-family: 'Avenir Next';
+                            font-style: normal;
+                            font-weight: 400;
+                            font-size: 14px;
+                            line-height: 19px;
+                            letter-spacing: -0.24px;
+                            sup {
+                                font-size: 11px;
+                            }
+                        }
+                    }
                 }
                 .inner-checkbox-form {
                     margin-left: 40px;
@@ -460,6 +479,12 @@ p {
                         }
                         .text {
                             margin-left: 8px;
+                            font-family: 'Avenir Next';
+                            font-style: normal;
+                            font-weight: 400;
+                            font-size: 14px;
+                            line-height: 19px;
+                            letter-spacing: -0.24px;
                         }
                         .style::before {
                             content: '';
@@ -532,6 +557,13 @@ p {
         margin-top: -88px;
     }
 }
+@media (min-width: 769px) {
+    .inner {
+        .container {
+            padding: 0 50px;
+        }
+    }
+}
 @media (max-width: 768px) {
     .header {
         .section-inner {
@@ -591,6 +623,7 @@ p {
             h2 {
                 text-transform: uppercase;
                 margin-bottom: 24px;
+                font-weight: 700;
             }
         }
         .choice-cards {
@@ -612,6 +645,7 @@ p {
                     }
                     &__description {
                         display: flex;
+                        align-items: center;
                         position: absolute;
                         bottom: 0;
                         left: 0;
@@ -655,6 +689,8 @@ p {
     .choice {
         .container {
             .choice-cards {
+                max-width: 780px;
+                margin: 0 auto;
                 flex-wrap: wrap;
                 &__column {
                     flex: none;
@@ -920,8 +956,9 @@ p {
         padding: 44px 0;
         .container {
             flex-wrap: wrap;
+            max-width: 780px;
             .help-item {
-                margin: 0 auto 24px auto;
+                margin-bottom: 24px;
                 &:last-child {
                     margin-bottom: 0;
                 }
@@ -932,6 +969,20 @@ p {
         }
     }
 }
+@media (max-width: 786px) {
+    .help {
+        .container {
+            .help-item {
+                width: 100%;
+                margin: 0 auto 24px auto;
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            } 
+        }
+    }
+}
+
 // === /HELP ==============================================================================
 
 // === PRICES ==============================================================================
@@ -965,6 +1016,9 @@ p {
         .container {
             .prices-description {
                 margin-left: 43px;
+                p {
+                    width: 85%;
+                }
             }
         }
     }
@@ -982,8 +1036,12 @@ p {
             }
             .prices-description {
                 text-align: center;
-                margin-left: 0;
                 padding-top: 0;
+                max-width: 660px;
+                margin: 0 auto;
+                p {
+                    width: 100%;
+                }
                 a {
                     margin-bottom: 48px;
                 }
@@ -1104,8 +1162,14 @@ p {
         .container {
             .about-achievements {
                 flex-wrap: wrap;
+                max-width: 400px;
+                margin: 0 auto 72px auto;
                 &__item {
                     width: 50%;
+                    &:nth-child(1),
+                    &:nth-child(2) {
+                        margin-bottom: 48px;
+                    }
                 }
             }
             .about-cards-mobile__item {

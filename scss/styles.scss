@@ -443,13 +443,21 @@ p {
                         padding-left: 18px;
                     }
                     .dropdown-menu.show { 
-                        li {
+                        padding: 0;
+                        .dropdown-item {
                             font-family: 'Avenir Next';
                             font-style: normal;
                             font-weight: 400;
                             font-size: 14px;
                             line-height: 19px;
                             letter-spacing: -0.24px;
+                            padding-bottom: 10px;
+                            &:last-child {
+                                padding-bottom: 14px;
+                            }
+                            &:first-child {
+                                padding-top: 14px;
+                            }
                             sup {
                                 font-size: 11px;
                             }

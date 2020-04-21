@@ -704,15 +704,22 @@ p {
           color: #BEC1CC; }
         .inner .container .inner-content .inner-form .inner__dropdown__item .dropdown-menu {
           padding-left: 18px; }
-        .inner .container .inner-content .inner-form .inner__dropdown__item .dropdown-menu.show li {
-          font-family: 'Avenir Next';
-          font-style: normal;
-          font-weight: 400;
-          font-size: 14px;
-          line-height: 19px;
-          letter-spacing: -0.24px; }
-          .inner .container .inner-content .inner-form .inner__dropdown__item .dropdown-menu.show li sup {
-            font-size: 11px; }
+        .inner .container .inner-content .inner-form .inner__dropdown__item .dropdown-menu.show {
+          padding: 0; }
+          .inner .container .inner-content .inner-form .inner__dropdown__item .dropdown-menu.show .dropdown-item {
+            font-family: 'Avenir Next';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 19px;
+            letter-spacing: -0.24px;
+            padding-bottom: 10px; }
+            .inner .container .inner-content .inner-form .inner__dropdown__item .dropdown-menu.show .dropdown-item:last-child {
+              padding-bottom: 14px; }
+            .inner .container .inner-content .inner-form .inner__dropdown__item .dropdown-menu.show .dropdown-item:first-child {
+              padding-top: 14px; }
+            .inner .container .inner-content .inner-form .inner__dropdown__item .dropdown-menu.show .dropdown-item sup {
+              font-size: 11px; }
       .inner .container .inner-content .inner-form .inner-checkbox-form {
         margin-left: 40px;
         display: flex; }

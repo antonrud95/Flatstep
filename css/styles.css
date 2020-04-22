@@ -381,7 +381,10 @@ table {
   background: #263056;
   border-radius: 6px;
   color: #fff !important;
-  text-decoration: none !important; }
+  text-decoration: none !important;
+  transition: .5s; }
+  .main-button:hover {
+    opacity: .7; }
 
 .dropdown-btn {
   font-family: 'Avenir Next';
@@ -465,7 +468,10 @@ p {
       align-items: center;
       height: 88px; }
       .header .section-inner .navigation__logo {
-        margin-right: 80px; }
+        margin-right: 80px;
+        height: 100%;
+        display: flex;
+        align-items: center; }
         .header .section-inner .navigation__logo .white {
           display: none; }
       .header .section-inner .navigation__burger {
@@ -526,6 +532,7 @@ p {
               border-right: 10px solid transparent;
               border-bottom: 14px solid #fff; }
         .header .section-inner .navigation__nav__account {
+          height: 100%;
           display: flex;
           align-items: center; }
           .header .section-inner .navigation__nav__account a {
@@ -648,7 +655,8 @@ p {
     display: flex; }
     .inner .container .inner-content .inner-form {
       background: #fff;
-      border-radius: 4px; }
+      border-radius: 4px;
+      position: relative; }
       .inner .container .inner-content .inner-form h2 {
         padding: 40px 0 0 40px;
         width: 65%; }
@@ -672,8 +680,9 @@ p {
       .inner .container .inner-content .inner-form .inner-select-box ::-webkit-input-placeholder {
         color: #BEC1CC; }
       .inner .container .inner-content .inner-form .inner__dropdown__item {
-        padding: 0 40px;
-        position: relative; }
+        position: relative;
+        max-width: 308px;
+        margin: 0 auto; }
         .inner .container .inner-content .inner-form .inner__dropdown__item .btn {
           position: relative;
           display: block;
@@ -705,7 +714,9 @@ p {
         .inner .container .inner-content .inner-form .inner__dropdown__item .dropdown-menu {
           padding-left: 18px; }
         .inner .container .inner-content .inner-form .inner__dropdown__item .dropdown-menu.show {
-          padding: 0; }
+          padding: 0;
+          margin: 0;
+          width: 100%; }
           .inner .container .inner-content .inner-form .inner__dropdown__item .dropdown-menu.show .dropdown-item {
             font-family: 'Avenir Next';
             font-style: normal;
@@ -804,18 +815,21 @@ p {
     max-height: 881px; }
     .inner .container .inner-content .inner-form {
       display: block;
-      width: 100%; }
+      width: 100%;
+      padding: 0 24px; }
       .inner .container .inner-content .inner-form h2 {
         padding-left: 24px;
         width: 75%; }
-      .inner .container .inner-content .inner-form .inner-select-box {
-        padding: 0 24px; }
-        .inner .container .inner-content .inner-form .inner-select-box input {
-          display: block;
-          width: 100%;
-          margin-left: 0; }
+      .inner .container .inner-content .inner-form .inner-select-box input {
+        display: block;
+        width: 100%;
+        margin-left: 0; }
       .inner .container .inner-content .inner-form .inner__dropdown__item {
-        padding: 0 24px; }
+        max-width: 680px;
+        width: 100%; }
+        .inner .container .inner-content .inner-form .inner__dropdown__item .dropdown-menu.show {
+          display: block;
+          width: 100%; }
     .inner .container .inner-content .inner-title h1 {
       font-size: 44px;
       line-height: 38px;
@@ -1049,7 +1063,11 @@ p {
           display: inline-block;
           padding: 11px 30px;
           border-radius: 4px;
-          border: 2px solid #263056; }
+          border: 2px solid #263056;
+          transition: .7s; }
+          .help .container .help-item__description a:hover {
+            background: #263056;
+            color: #fff; }
 
 @media (max-width: 1134px) {
   .help {
@@ -1062,14 +1080,22 @@ p {
         .help .container .help-item:last-child {
           margin-bottom: 0; }
         .help .container .help-item__description {
-          padding: 0 25px; } }
+          padding: 0; }
+          .help .container .help-item__description p {
+            padding: 0 25px; } }
 
 @media (max-width: 786px) {
-  .help .container .help-item {
-    width: 100%;
-    margin: 0 auto 24px auto; }
-    .help .container .help-item:last-child {
-      margin-bottom: 0; } }
+  .help .container {
+    max-width: 358px; }
+    .help .container .help-item {
+      margin-bottom: 24px;
+      margin: 0 auto 24px auto; }
+      .help .container .help-item:last-child {
+        margin-bottom: 0; } }
+
+@media (max-width: 768px) {
+  .help .container {
+    max-width: 100%; } }
 
 .prices {
   background: #F3F4F8;

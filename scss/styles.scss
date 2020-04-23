@@ -140,6 +140,7 @@ p {
                     display: flex;
                     align-items: center;
                     height: 88px;
+                    position: relative;
                     &__item {
                         display: flex;
                         align-items: center;
@@ -158,10 +159,21 @@ p {
                             }
                             &:hover {
                                 background: #f4f4f8;
+                                &:before {
+                                    content: '';
+                                    position: absolute;
+                                    left: 0;
+                                    bottom: 32px;
+                                    height: 2px;
+                                    width: 80%;
+                                    margin-left: 18px;
+                                    background-color: $color-text;
+                                }
                             }
                             .fa-chevron-down {
                                 margin-left: 5px;
                                 color: $color-text;
+                                transition: .5s;
                             }
                         }
                         &.show {
@@ -464,6 +476,16 @@ p {
                             line-height: 19px;
                             letter-spacing: -0.24px;
                             padding-bottom: 10px;
+                            span {
+                                font-family: 'Avenir Next';
+                                font-style: normal;
+                                font-weight: 400;
+                                font-size: 14px;
+                                line-height: 19px;
+                                letter-spacing: -0.24px;
+                                padding-bottom: 10px;
+                            }
+                            
                             &:last-child {
                                 padding-bottom: 14px;
                             }
@@ -471,7 +493,13 @@ p {
                                 padding-top: 14px;
                             }
                             sup {
-                                font-size: 11px;
+                                font-family: 'Avenir Next';
+                                font-style: normal;
+                                font-weight: 400;
+                                font-size: 9px;
+                                line-height: 19px;
+                                letter-spacing: -0.24px;
+                                padding-bottom: 10px;
                             }
                         }
                     }
@@ -1006,7 +1034,7 @@ p {
 @media (max-width: 786px) {
     .help {
         .container {
-            max-width: 358px;
+            width: 358px;
             .help-item {
                 margin-bottom: 24px;
                 margin: 0 auto 24px auto;
@@ -1017,10 +1045,10 @@ p {
         }
     }
 }
-@media (max-width: 768px) {
+@media (max-width: 500px) {
     .help {
         .container {
-            max-width: 100%;
+            width: 100%;
         }
     }
 }

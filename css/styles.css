@@ -484,7 +484,8 @@ p {
         .header .section-inner .navigation__nav__dropdown {
           display: flex;
           align-items: center;
-          height: 88px; }
+          height: 88px;
+          position: relative; }
           .header .section-inner .navigation__nav__dropdown__item {
             display: flex;
             align-items: center; }
@@ -502,9 +503,19 @@ p {
                 box-shadow: none; }
               .header .section-inner .navigation__nav__dropdown__item button:hover {
                 background: #f4f4f8; }
+                .header .section-inner .navigation__nav__dropdown__item button:hover:before {
+                  content: '';
+                  position: absolute;
+                  left: 0;
+                  bottom: 32px;
+                  height: 2px;
+                  width: 80%;
+                  margin-left: 18px;
+                  background-color: #263056; }
               .header .section-inner .navigation__nav__dropdown__item button .fa-chevron-down {
                 margin-left: 5px;
-                color: #263056; }
+                color: #263056;
+                transition: .5s; }
             .header .section-inner .navigation__nav__dropdown__item.show .fa-chevron-down {
               transform: rotate(180deg); }
           .header .section-inner .navigation__nav__dropdown .dropdown .dropdown-toggle::after {
@@ -725,12 +736,26 @@ p {
             line-height: 19px;
             letter-spacing: -0.24px;
             padding-bottom: 10px; }
+            .inner .container .inner-content .inner-form .inner__dropdown__item .dropdown-menu.show .dropdown-item span {
+              font-family: 'Avenir Next';
+              font-style: normal;
+              font-weight: 400;
+              font-size: 14px;
+              line-height: 19px;
+              letter-spacing: -0.24px;
+              padding-bottom: 10px; }
             .inner .container .inner-content .inner-form .inner__dropdown__item .dropdown-menu.show .dropdown-item:last-child {
               padding-bottom: 14px; }
             .inner .container .inner-content .inner-form .inner__dropdown__item .dropdown-menu.show .dropdown-item:first-child {
               padding-top: 14px; }
             .inner .container .inner-content .inner-form .inner__dropdown__item .dropdown-menu.show .dropdown-item sup {
-              font-size: 11px; }
+              font-family: 'Avenir Next';
+              font-style: normal;
+              font-weight: 400;
+              font-size: 9px;
+              line-height: 19px;
+              letter-spacing: -0.24px;
+              padding-bottom: 10px; }
       .inner .container .inner-content .inner-form .inner-checkbox-form {
         margin-left: 40px;
         display: flex; }
@@ -1086,16 +1111,16 @@ p {
 
 @media (max-width: 786px) {
   .help .container {
-    max-width: 358px; }
+    width: 358px; }
     .help .container .help-item {
       margin-bottom: 24px;
       margin: 0 auto 24px auto; }
       .help .container .help-item:last-child {
         margin-bottom: 0; } }
 
-@media (max-width: 768px) {
+@media (max-width: 500px) {
   .help .container {
-    max-width: 100%; } }
+    width: 100%; } }
 
 .prices {
   background: #F3F4F8;
